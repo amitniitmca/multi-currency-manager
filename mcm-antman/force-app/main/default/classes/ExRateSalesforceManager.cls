@@ -9,7 +9,7 @@ public inherited sharing class ExRateSalesforceManager {
     
     public static Boolean updateCurrencyExchangeRate(String isoCode, Decimal conversionRate){
         HttpRequest req = new HttpRequest();
-		req.setEndpoint('callout:SF/services/data/v52.0/sobjects/CurrencyType/');
+		req.setEndpoint('callout:MCM_Call/services/data/v52.0/sobjects/CurrencyType/');
 		req.setMethod('POST');
 		req.setBody('{ "IsoCode":  "'+isoCode+'",  "DecimalPlaces": 2,  "ConversionRate": '+conversionRate.setScale(4)+',  "IsActive":  "true"}');
 		req.setHeader('Authorization', 'OAuth ' + UserInfo.getSessionId());
@@ -26,7 +26,7 @@ public inherited sharing class ExRateSalesforceManager {
     public static Boolean changeCurrencyTypeStatus(String isoCode, Boolean activated){
         CurrencyType currType = getCurrencyExchangeRateByCode(isoCode);
         HttpRequest req = new HttpRequest();
-		req.setEndpoint('callout:SF/services/data/v52.0/sobjects/CurrencyType/');
+		req.setEndpoint('callout:MCM_Call/services/data/v52.0/sobjects/CurrencyType/');
 		req.setMethod('POST');
 		req.setBody('{ "IsoCode":  "'+isoCode+'",  "DecimalPlaces": 2,  "ConversionRate": '+currType.ConversionRate+',  "IsActive":  "'+activated+'"}');
 		req.setHeader('Authorization', 'OAuth ' + UserInfo.getSessionId());
