@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
-    <consumerKey>3MVG9fe4g9fhX0E5YEQnzJ0JMwQEp0FLXF7YR47Fs0.AzJabWhrxSNtsMP9_KKbHnNpi6I3ImPUFTUyDoflw2</consumerKey>
-    <consumerSecret>cub6orPadegiZavyJL/fomduZ4AUJEQs0MQFdDUZlwI+vEEc6MGWIQYReJu6buTzqKxhV+LzekT0RZE+pgKyZnBBGPdiC2rX</consumerSecret>
-    <friendlyName>SF Auth</friendlyName>
+    <consumerKey>3MVG9e2mBbZnmM6lRzILeF43M9U7IuYUuyUSh1swRps3wuAZMr3SmVf8iPuNIZA00NmBjhtRKojC3dUcveByl</consumerKey>
+    <consumerSecret>h+lABMLFNc54BcM/1ETN/yDX/+Zbi0+AYdakFEPtLBHvcWP5VOB3LcN51uc2kHkBRxgxLL+aD5mch1WBCwGLtnBBGPdiC2rX</consumerSecret>
+    <friendlyName>MCM SF Auth</friendlyName>
     <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
     <providerType>Salesforce</providerType>
     <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
