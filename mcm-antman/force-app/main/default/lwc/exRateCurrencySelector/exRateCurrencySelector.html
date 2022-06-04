@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : concret.io
+  @group             : 
+  @last modified on  : 10-06-2021
+  @last modified by  : concret.io
+-->
+<template>
+    <div class="slds-var-p-horizontal_small">
+        <lightning-layout multiple-rows>
+            <template if:true={currencyOptions}>
+                <lightning-layout-item size="12" padding="around-small">
+                    <lightning-dual-listbox name="currencies" label="Select Currencies" source-label="Available"
+                        selected-label="Selected" field-level-help="This is a dual listbox for selecting currencies"
+                        options={currencyOptions} required-options={requiredOptions} onchange={handleChange}>
+                    </lightning-dual-listbox>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" padding="around-small">
+                    <lightning-button variant="brand" label="Add currencies to Org" title="add" onclick={handleClick}
+                        disabled={addCurrencyDisabled}></lightning-button>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </div>
+</template>

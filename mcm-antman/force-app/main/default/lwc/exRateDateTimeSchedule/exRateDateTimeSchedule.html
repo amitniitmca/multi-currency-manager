@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : concret.io
+  @group             : 
+  @last modified on  : 10-04-2021
+  @last modified by  : concret.io
+-->
+<template>
+    <div class="slds-var-p-horizontal_small">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-radio-group name="schedulerType" label="Scheduler Type" options={scheduleOptions}
+                    value={scheduleValue} onchange={handleRadioChange}>
+                </lightning-radio-group>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <p>Already Scheduled</p>
+                <template if:true={leftScheduleOptions} for:each={leftScheduleOptions} for:item="leftSch" for:index="index">
+                   <li key={leftSch.value}>
+                        {leftSch.label}
+                   </li>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small" class="slds-align_absolute-center">
+                <lightning-button variant="brand" label="Schedule" title="Schedule" onclick={handleScheduleClick}>
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : concret.io
+  @group             : 
+  @last modified on  : 10-02-2021
+  @last modified by  : concret.io
+-->
+<template>
+    <lightning-card title="Current Currency Details" icon-name="utility:money">
+        <div slot="actions">
+            <lightning-button-menu alternative-text="Show menu" onselect={handleOnSelect}>
+                <lightning-menu-item value="ACTIVE" label="Active Currencies">
+                </lightning-menu-item>
+                <lightning-menu-item value="INACTIVE" label="Inactive Currencies">
+                </lightning-menu-item>
+            </lightning-button-menu>
+        </div>
+        <div if:true={dataLoading}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+        <div if:false={dataLoading}>
+            <div class="slds-p-horizontal_small">
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="12" padding="around-small">
+                        <lightning-button-group>
+                            <lightning-button label="Activate" disabled={isActiveDisabled} onclick={handleActivateClick}></lightning-button>
+                            <lightning-button label="De-activate" disabled={isDeactiveDisabled} onclick={handleDeactivateClick}></lightning-button>
+                            <lightning-button label="Reset" disabled={isResetDisabled} onclick={handleResetClick}></lightning-button>
+                        </lightning-button-group>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" padding="around-small">
+                        <lightning-datatable key-field="id" data={dataList} columns={columnsList}
+                            column-widths-mode="auto" onrowselection={handleRowSelection}>
+                        </lightning-datatable>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+    </lightning-card>
+</template>

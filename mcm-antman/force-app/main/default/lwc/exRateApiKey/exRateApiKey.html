@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : concret.io
+  @group             : 
+  @last modified on  : 09-30-2021
+  @last modified by  : concret.io
+-->
+<template>
+    <div class="slds-var-p-horizontal_small">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                <lightning-input type="password" variant="label-inline" name="apiKey" label="Geo API Key"
+                    value={apiKeyValue} disabled={saveDisabled} onchange={handleInputChange}>
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                <lightning-button label="Edit" variant="base" class="slds-var-p-around_small" disabled={editDisabled}
+                    onclick={handleEditClick}>
+                </lightning-button>
+                <lightning-button label="Save" variant="base" class="slds-var-p-around_small" disabled={saveDisabled}
+                    onclick={handleSaveClick}>
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

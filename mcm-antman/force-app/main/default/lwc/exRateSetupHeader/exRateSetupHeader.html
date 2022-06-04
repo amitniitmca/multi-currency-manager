@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : concret.io
+  @group             : 
+  @last modified on  : 10-03-2021
+  @last modified by  : concret.io
+-->
+<template>
+    <div class="slds-page-header">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-opportunity" title="opportunity">
+                            <lightning-icon icon-name="utility:currency" size="medium"></lightning-icon>
+                            <span class="slds-assistive-text">Currency Status</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span class="slds-page-header__title slds-truncate header-head" title="Currency Status">Currency
+                                        Status</span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div if:true={isMultiple}>
+                            <p class="slds-page-header__name-meta header-body">Multiple Currency: <b>{multipleCurrencyStatus}</b>• Number of
+                                Currencies: <b>{numberOfMultipleCurrencies}</b></p>
+                            <p class="slds-page-header__name-meta header-body">Number of Active Currencies: <b>{numberOfActiveCurrencies} </b> •
+                                Corporate Currency:<b> {selectedCorporateCurrency} </b></p>
+                        </div>
+                        <div if:false={isMultiple} >
+                            <p class="slds-page-header__name-meta header-body">Multiple Currency: {multipleCurrencyStatus} </p>
+                            <a href="/lightning/setup/CompanyProfileInfo/home" target="_blank" class="slds-page-header__name-meta header-body">Go to enable multiple currency </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

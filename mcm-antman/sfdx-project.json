@@ -6,7 +6,7 @@
     }
   ],
   "name": "mcm-antman",
-  "namespace": "",
+  "namespace": "proper_mcm",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "54.0"
 }

@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : concret.io
+  @group             : 
+  @last modified on  : 09-30-2021
+  @last modified by  : concret.io
+-->
+<template>
+    <lightning-card variant="Narrow" title="Geo API Setup" icon-name="utility:setup">
+        <div class="slds-p-horizontal_small">
+            <lightning-layout multiple-rows class="main-container">
+                <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+                    large-device-size="12">
+                    <c-ex-rate-currency-info geo-api-url="https://currency.getgeoapi.com/account/">
+                    </c-ex-rate-currency-info>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+                    large-device-size="12">
+                    <c-ex-rate-api-key></c-ex-rate-api-key>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+                    large-device-size="12">
+                    <c-ex-rate-currency-selector></c-ex-rate-currency-selector>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>
